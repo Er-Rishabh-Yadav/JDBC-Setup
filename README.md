@@ -1,18 +1,44 @@
-## Getting Started
+## MYSQL database query
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Create database Setup;
+use setup;
 
-## Folder Structure
+create table program (object_id int primary key ,object_name varchar(50)); 
 
-The workspace contains two folders by default, where:
+select * from program;
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## install the jdbc driver
+https://dev.mysql.com/downloads/file/?id=520816
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## In VsCode go to command palet and create java project
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+we name our project as "Setup_JDBC"
 
-## Dependency Management
+The file structure of our project is:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+dir - bin
+dir - lib
+dir - src
+file - README.md
+ 
+## adding the jdbc connector to our project
+
+ After Extracting the mysql-connector-j -8.1.0 add the mysql-connector-j-8.1.0 to lib dir of the java project.
+
+ ## After coding is done 
+
+ ## process of compiling and running the project
+# option 1 
+
+ in the vscode run from the code runner icon Option "run java"
+
+note - your env variables are setup perfectly
+
+# option 2
+
+compile our code using : javac -cp "..\lib\mysql-connector-j-8.1.0.jar;."  Main.java
+
+
+run our code using : java -cp "..\lib\mysql-connector-j-8.1.0.jar;."  Main  
+
+## connection established message received
