@@ -1,6 +1,5 @@
 import java.sql.Statement;
 
-import javax.naming.spi.DirStateFactory.Result;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
