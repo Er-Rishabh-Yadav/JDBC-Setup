@@ -5,7 +5,7 @@ use setup;
 
 create table user (object_id int primary key ,object_name varchar(50)); 
 
-select * from program;
+select * from user;
 
 ## install the jdbc driver
 https://dev.mysql.com/downloads/file/?id=520816
@@ -49,3 +49,14 @@ note-current dir is src
 
 
 ## connection established message received
+
+
+
+# OUR CLI Looks LIke
+
+
+
+![image](https://github.com/Er-Rishabh-Yadav/JDBC-Setup/assets/140261049/4aa66666-1c4b-4a40-854d-8d334f9e8ed2)
+
+
+
