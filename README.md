@@ -41,6 +41,11 @@ note - your env variables are setup perfectly
 compile our code using : javac -cp "..\lib\mysql-connector-j-8.1.0.jar;."  Main.java
 
 
+
 run our code using : java -cp "..\lib\mysql-connector-j-8.1.0.jar;."  Main  
+
+
+note-current dir is src
+
 
 ## connection established message received
