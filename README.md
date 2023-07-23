@@ -5,7 +5,7 @@ use setup;
 
 create table user (object_id int primary key ,object_name varchar(50)); 
 
-select * from program;
+select * from user;
 
 ## install the jdbc driver
 https://dev.mysql.com/downloads/file/?id=520816
