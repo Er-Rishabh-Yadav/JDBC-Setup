@@ -17,7 +17,9 @@ we name our project as "Setup_JDBC"
 The file structure of our project is:
 
 dir - bin
+
 dir - lib
+
 dir - src
 file - README.md
  
