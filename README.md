@@ -3,7 +3,7 @@
 Create database Setup;
 use setup;
 
-create table program (object_id int primary key ,object_name varchar(50)); 
+create table user (object_id int primary key ,object_name varchar(50)); 
 
 select * from program;
 

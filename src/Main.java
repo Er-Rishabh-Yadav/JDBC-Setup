@@ -55,11 +55,19 @@ public class Main {
             try{
                 Statement stmt = (Statement) con.createStatement();
                 ResultSet rs = ((java.sql.Statement) stmt).executeQuery("SELECT * FROM Setup.User");
-                while(rs.next()){
-                    System.out.println(rs.getInt(1)+" "+rs.getString(2));
+                    
+                System.out.println("\n\n|---------------------------------|");
+                    System.out.println("|-User table of the SetupDatabase-|");
+                    System.out.println("|---------------------------------|");
+                    System.out.println("|  Object Id |     Object Name    |");
+                    System.out.println("|---------------------------------|");
+                    while(rs.next()){
+                        System.out.println("|  "+rs.getInt(1)+"  |   \t"+rs.getString(2)+"\t   |");
+                       
+                        System.out.println("|---------------------------------|");
                 }
 
-                System.out.println("Data Read");
+                System.out.println("\n Data Read\n");
             }catch(Exception e){
                 System.out.println(e);
             }
@@ -84,19 +92,72 @@ public class Main {
         }
     }
      public static void main(String[] args) throws SQLException {
-        try {
+        
+            // we are providing user interaction using while loop and switch case
+            // statements   
             DBOperations.createDB();
-            DBOperations.createTable();
-            // DBOperations.insertData(2,"Rakell");
-            // DBOperations.updateData(1,"Rakesh");
-            DBOperations.deleteData(2);
-            DBOperations.readData();
+            DBOperations.createTable();    
+            int choice = 2;
+            while(choice!=0){
+                //need to improve command line interface
+                System.out.println("\n\n|---------------------------------|");
+                System.out.println("|--Welcome to the Setup Database--|");
+                System.out.println("|---------------------------------|");
+                System.out.println("\nEnter your choice");
+                System.out.println(" \t 1. Insert Data");
+                System.out.println(" \t 2. Read Data");
+                System.out.println(" \t 3. Update Data");
+                System.out.println(" \t 4. Delete Data");
+                System.out.println(" \t 0. Exit\n\n");
+                try{
 
-        } catch (Exception e) {
-            // TODO: handle exception
-            System.out.println(e);
-        }
-    }
+                    choice = Integer.parseInt(System.console().readLine());
+                    
+                    switch(choice){
+
+                        case 1:
+                        System.out.println("Enter Object Id");
+                        int id = Integer.parseInt(System.console().readLine());
+                        System.out.println("Enter Object Name");
+                        String name = System.console().readLine();
+                        DBOperations.insertData(id, name);
+                        break;
+                        case 2:
+                        DBOperations.readData();
+                        break;
+                        case 3:
+                        System.out.println("Enter Object Id");
+                        id = Integer.parseInt(System.console().readLine());
+                        System.out.println("Enter Object Name");
+                        name = System.console().readLine();
+                        DBOperations.updateData(id, name);
+                        break;
+                        case 4:
+                        System.out.println("Enter Object Id");
+                        id = Integer.parseInt(System.console().readLine());
+                        DBOperations.deleteData(id);
+                        break;
+                        case 0:
+                        System.out.println("Exiting");
+                        System.out.println(":~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~:");
+                        break;
+                        default:
+                        System.out.println("Invalid Choice");
+                    }
+                }
+                catch (Exception e) {
+                        // TODO: handle exception
+                        System.out.println("\t Invalid Choice Exception");
+                        System.out.println("\n\tPlease Enter a valid choice");
+                    }
+                
+                }
+        
+            }
 
 
-}
+        } 
+    
+
+
+
