@@ -49,3 +49,14 @@ note-current dir is src
 
 
 ## connection established message received
+
+
+
+# OUR CLI Looks LIke
+
+
+
+![image](https://github.com/Er-Rishabh-Yadav/JDBC-Setup/assets/140261049/4aa66666-1c4b-4a40-854d-8d334f9e8ed2)
+
+
+
